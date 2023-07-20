@@ -36,6 +36,7 @@ class TestDiningExperienceManager(unittest.TestCase):
         
         total_cost = self.manager.calculate_cost(order)
         print(total_cost)
+        expected_cost = 171  # (5 * 10 + 3 * 12 + 2 * 5 + 5 * 15) - 25 (total > 100 discount) + 5 * 15 * 0.05
 
     def test_confirm_order_confirmation(self):
         with patch('builtins.input', return_value='y'):
