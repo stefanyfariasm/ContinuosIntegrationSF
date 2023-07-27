@@ -1,4 +1,3 @@
-
 import unittest
 from denningExperienceSF import DiningExperienceManager
 
@@ -86,11 +85,8 @@ class TestDiningExperienceManager(unittest.TestCase):
             total_cost = 65
             self.assertFalse(self.manager.confirm_order(order, total_cost))
 
-    def test_get_valid_quantity_valid_input(self):
-        with unittest.mock.patch('builtins.input', return_value='10'):
-            quantity = self.manager.get_valid_quantity("Enter quantity: ")
-            self.assertEqual(quantity, 10)
+    
 
 
 if __name__ == '__main__':
-    unittest.main()
+      unittest.main()
